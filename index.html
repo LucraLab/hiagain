@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiAgain - Stay Connected. Win More Listings.</title>
+    <title>HiAgain - Stay in Touch. Win More Listings.</title>
+    <meta name="description" content="Stop losing past clients who forget your name. HiAgain helps real estate agents stay top-of-mind with personalized follow-ups every 90 days.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -282,9 +283,78 @@
             line-height: 1.4;
         }
         
+        /* Problem Section */
+        .problem {
+            background: var(--gray-light);
+            padding: 6rem 0;
+        }
+        
+        .problem-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .problem-headline {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--navy-dark);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--blue);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        
+        .opportunity-box {
+            background: var(--navy-dark);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 3rem;
+            display: inline-block;
+        }
+        
+        .opportunity-box p {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .opportunity-box .highlight {
+            color: var(--blue-light);
+            font-weight: 600;
+        }
+        
         /* How It Works Section */
         .how-it-works {
-            background: var(--gray-light);
+            background: var(--white);
             padding: 6rem 0;
         }
         
@@ -320,11 +390,10 @@
         }
         
         .step-card {
-            background: var(--white);
+            background: var(--gray-light);
             padding: 2.5rem 2rem;
             border-radius: 16px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
             transition: all 0.3s;
         }
         
@@ -370,18 +439,66 @@
             font-size: 0.95rem;
         }
         
-        /* Testimonials Section */
-        .testimonials {
+        /* Messages Section */
+        .messages {
             background: var(--navy-dark);
             padding: 6rem 0;
         }
         
-        .testimonials .section-header h2 {
+        .messages .section-header h2 {
             color: var(--white);
         }
         
-        .testimonials .section-header p {
+        .messages .section-header p {
             color: rgba(255,255,255,0.6);
+        }
+        
+        .messages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .message-bubble {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .message-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 24px;
+            width: 20px;
+            height: 20px;
+            background: rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transform: rotate(45deg);
+        }
+        
+        .message-text {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .message-sender {
+            color: var(--blue-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--gray-light);
+            padding: 6rem 0;
         }
         
         .testimonials-grid {
@@ -391,16 +508,16 @@
         }
         
         .testimonial-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.05);
             border-radius: 16px;
             padding: 2rem;
             transition: all 0.3s;
         }
         
         .testimonial-card:hover {
-            background: rgba(255,255,255,0.08);
             transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
         }
         
         .quote-mark {
@@ -411,7 +528,7 @@
         }
         
         .testimonial-text {
-            color: rgba(255,255,255,0.85);
+            color: var(--gray-dark);
             font-size: 1rem;
             line-height: 1.7;
             margin-bottom: 1.5rem;
@@ -437,19 +554,19 @@
         }
         
         .author-info h4 {
-            color: var(--white);
+            color: var(--navy-dark);
             font-weight: 600;
             font-size: 1rem;
         }
         
         .author-info span {
-            color: rgba(255,255,255,0.5);
+            color: var(--gray);
             font-size: 0.9rem;
         }
         
         /* Pricing Section */
         .pricing {
-            background: var(--gray-light);
+            background: var(--white);
             padding: 6rem 0;
         }
         
@@ -510,10 +627,9 @@
         }
         
         .pricing-card {
-            background: var(--white);
+            background: var(--gray-light);
             border-radius: 20px;
             padding: 2.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
             position: relative;
             transition: all 0.3s;
         }
@@ -630,11 +746,73 @@
             color: var(--white);
         }
         
+        /* FAQ Section */
+        .faq {
+            background: var(--gray-light);
+            padding: 6rem 0;
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        
+        .faq-item h4 {
+            color: var(--navy-dark);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .faq-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: var(--navy-dark);
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .final-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-cta p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .final-cta .hero-cta {
+            display: inline-flex;
+        }
+        
         /* Footer */
         .footer {
             background: var(--navy-dark);
             padding: 3rem 0;
             text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
         
         .footer-content {
@@ -684,7 +862,9 @@
             }
             
             .steps-grid,
-            .testimonials-grid {
+            .testimonials-grid,
+            .messages-grid,
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -707,13 +887,19 @@
                 font-size: 2rem;
             }
             
-            .section-header h2 {
+            .section-header h2,
+            .final-cta h2 {
                 font-size: 2rem;
+            }
+            
+            .problem-headline {
+                font-size: 1.5rem;
             }
             
             .step-card,
             .testimonial-card,
-            .pricing-card {
+            .pricing-card,
+            .faq-item {
                 padding: 1.5rem;
             }
         }
@@ -729,7 +915,8 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#messages">Examples</a></li>
+                <li><a href="#testimonials">Stories</a></li>
                 <li><a href="#pricing">Pricing</a></li>
             </ul>
             <a href="#pricing" class="nav-cta">Get Started</a>
@@ -741,10 +928,10 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>84% of buyers say they'd use their agent again. <span>Only 24% do.</span></h1>
-                <p class="hero-subhead">HiAgain uses AI to craft personalized messages that keep you top-of-mind with past clients—so you never miss another listing opportunity.</p>
+                <h1>Your past clients are forgetting you. <span>Let's fix that.</span></h1>
+                <p class="hero-subhead">84% of buyers say they'd use their agent again. Only 24% actually do. The rest? They simply forgot you exist. HiAgain makes staying in touch effortless.</p>
                 <a href="#pricing" class="hero-cta">
-                    Start Your Free Trial
+                    Start Free Trial
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
@@ -769,6 +956,32 @@
         </div>
     </section>
 
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="problem-container">
+            <p class="problem-headline">84% of buyers say they'd use their agent again. Only 24% actually do. The rest? They forgot you exist.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">84%</span>
+                    <span class="stat-label">Would use their agent again</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24%</span>
+                    <span class="stat-label">Actually do use the same agent</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">60%</span>
+                    <span class="stat-label">Commission lost to forgetfulness</span>
+                </div>
+            </div>
+            
+            <div class="opportunity-box">
+                <p>That's <span class="highlight">$18,000+ in lost commission</span> per year for the average agent.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="section-container">
@@ -781,19 +994,43 @@
                     <div class="step-icon">🔗</div>
                     <span class="step-number">1</span>
                     <h3>Connect Your CRM</h3>
-                    <p>One-click integration with Follow Up Boss and other popular real estate CRMs.</p>
+                    <p>Link to Follow Up Boss in one click. We import your client list and remember their purchase history.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-icon">✨</div>
                     <span class="step-number">2</span>
-                    <h3>AI Drafts Messages</h3>
-                    <p>Our AI analyzes client data and drafts personalized messages for every occasion.</p>
+                    <h3>We Draft the Perfect Message</h3>
+                    <p>Personal, thoughtful texts that reference their home, their neighborhood, or how long it's been. Every message is tailored to them.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-icon">📱</div>
                     <span class="step-number">3</span>
-                    <h3>Tap to Send</h3>
-                    <p>Review and send from your own number. Takes 10 seconds, builds relationships for life.</p>
+                    <h3>You Send From Your Number</h3>
+                    <p>Review, edit if you want, and hit send. It goes from your phone number, so it feels personal—not like a marketing blast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section class="messages" id="messages">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>What The Messages Look Like</h2>
+                <p>Personal, thoughtful, and distinctly you</p>
+            </div>
+            <div class="messages-grid">
+                <div class="message-bubble">
+                    <p class="message-text">"Hey Sarah! Can't believe it's been 3 years since you moved into the Maple Street house. How's the garden coming along? Hope the tomatoes are thriving! 🍅"</p>
+                    <span class="message-sender">— Mike, sent from his personal number</span>
+                </div>
+                <div class="message-bubble">
+                    <p class="message-text">"Hi Tom, saw that Tesla factory news near your neighborhood. Wild how much that area has changed since you bought! Still loving the place?"</p>
+                    <span class="message-sender">— Jennifer, sent from her personal number</span>
+                </div>
+                <div class="message-bubble">
+                    <p class="message-text">"Happy 2-year home-iversary, Rodriguez family! Hope the kids are enjoying the bigger backyard. That pool was such a smart addition! 🏊‍♀️"</p>
+                    <span class="message-sender">— David, sent from his personal number</span>
                 </div>
             </div>
         </div>
@@ -803,13 +1040,13 @@
     <section class="testimonials" id="testimonials">
         <div class="section-container">
             <div class="section-header">
-                <h2>What Agents Are Saying</h2>
-                <p>Real results from agents who never let a client slip away</p>
+                <h2>Real Results from Real Agents</h2>
+                <p>These agents stopped letting past clients slip away</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="quote-mark">"</div>
-                    <p class="testimonial-text">I got a $1.2M listing from a client I hadn't spoken to in 3 years. HiAgain reminded me to reach out, and they were already thinking of selling!</p>
+                    <p class="testimonial-text">I got a $780K listing from a client I hadn't talked to in 2 years. They were already interviewing other agents when my text came through. Closed 6 weeks later.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">MT</div>
                         <div class="author-info">
@@ -820,7 +1057,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="quote-mark">"</div>
-                    <p class="testimonial-text">This is the easiest $49 I spend every month. I've closed 4 deals this year from past clients I would've completely forgotten about.</p>
+                    <p class="testimonial-text">Three referrals this quarter alone. Each one told me, "You're the only agent who actually keeps in touch." That $149/month just paid for my whole year in the first month.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">CR</div>
                         <div class="author-info">
@@ -831,7 +1068,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="quote-mark">"</div>
-                    <p class="testimonial-text">The AI messages don't sound robotic at all. My clients think I'm personally checking in on them. It's actually strengthened my relationships.</p>
+                    <p class="testimonial-text">My clients think I'm personally remembering every home-iversary and neighborhood update. One client said, "How do you stay so thoughtful with hundreds of clients?" My secret: HiAgain.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">DW</div>
                         <div class="author-info">
@@ -849,7 +1086,7 @@
         <div class="section-container">
             <div class="section-header">
                 <h2>Simple Pricing</h2>
-                <p>Choose the plan that fits your business</p>
+                <p>One deal pays for years of staying connected</p>
             </div>
             <div class="pricing-toggle">
                 <span class="toggle-label">Monthly</span>
@@ -861,39 +1098,85 @@
                 <div class="pricing-card popular">
                     <span class="popular-badge">Most Popular</span>
                     <h3>Solo</h3>
-                    <p class="description">Perfect for individual agents</p>
+                    <p class="description">For solo agents up to 250 past clients</p>
                     <div class="price">
                         <span class="amount">$49</span>
                         <span class="period">/month</span>
                     </div>
                     <ul class="features-list">
-                        <li>Up to 250 contacts</li>
-                        <li>Unlimited AI-drafted messages</li>
-                        <li>CRM integration</li>
-                        <li>Send from your own number</li>
-                        <li>Mobile app access</li>
-                        <li>Email support</li>
+                        <li>Up to 250 past clients</li>
+                        <li>Personalized messages for every client</li>
+                        <li>Sends from your own number</li>
+                        <li>Follow Up Boss integration</li>
+                        <li>90-day follow-up rhythm</li>
+                        <li>Edit every message before sending</li>
                     </ul>
                     <button class="pricing-cta primary">Start Free Trial</button>
                 </div>
                 <div class="pricing-card">
                     <h3>Team</h3>
-                    <p class="description">For growing real estate teams</p>
+                    <p class="description">For teams up to 5 agents, 1,000 clients</p>
                     <div class="price">
                         <span class="amount">$149</span>
                         <span class="period">/month</span>
                     </div>
                     <ul class="features-list">
-                        <li>Up to 5 agents</li>
-                        <li>Up to 1,000 contacts</li>
+                        <li>Up to 5 team agents</li>
+                        <li>Up to 1,000 past clients</li>
                         <li>Everything in Solo</li>
-                        <li>Team analytics dashboard</li>
+                        <li>Team performance dashboard</li>
                         <li>Priority support</li>
-                        <li>Custom AI training</li>
+                        <li>Message history & analytics</li>
                     </ul>
                     <button class="pricing-cta secondary">Contact Sales</button>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Questions You Might Have</h2>
+                <p>Straight answers, no surprises</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Do I have to write the messages myself?</h4>
+                    <p>Nope. We draft every message using your client's purchase history—how long they've owned, their neighborhood, even local news. You just review and hit send.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Will it sound like a robot?</h4>
+                    <p>Not at all. Every message is editable, and it sends from your actual phone number. Your clients think it's you being thoughtful (which it is—we just help with the remembering part).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What CRM does it work with?</h4>
+                    <p>We integrate directly with Follow Up Boss. More CRMs coming soon—email us if you use something else and want to be notified.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I change how often it sends?</h4>
+                    <p>Absolutely. Default is every 90 days (that's the sweet spot for staying in touch without being annoying), but you can customize the rhythm for different client types.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if I want to cancel?</h4>
+                    <p>Cancel anytime, no contracts, no hard feelings. We figure if you're not getting referrals and repeat business from this, you shouldn't pay for it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="final-cta-content">
+            <h2>Start reconnecting with your past clients today</h2>
+            <p>Every day you wait, another past client forgets your name. The agents who win are the ones who stay in touch.</p>
+            <a href="#pricing" class="hero-cta">
+                Get Started Free
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
         </div>
     </section>
 
@@ -904,7 +1187,7 @@
                 <div class="logo-icon">H</div>
                 HiAgain
             </div>
-            <p>© 2026 HiAgain. All rights reserved. | Stay Connected. Win More Listings.</p>
+            <p>© 2026 HiAgain. All rights reserved. | Stay in Touch. Win More Listings.</p>
         </div>
     </footer>
 
